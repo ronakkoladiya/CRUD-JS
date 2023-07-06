@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.background{
+    width: 100%;
+    height: 100vh;
+    background-image: url('./../assets/1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.crudform{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+}
+
+.crudform form{
+    width: 500px;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.11);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.137);
+}
+
+.crudform form .title{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.crudform form span:not(.title){
+    font-size: 16px;
+}
+
+.box{
+    margin-bottom: 20px;
+}
+
+input[type=text],input[type=email],input[type=password],input[type=number]{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.199);
+    border: 1px solid transparent;
+    transition: .3s;
+    color: white;
+}
+
+::placeholder{
+    color: rgba(255, 255, 255, 0.452);
+}
+
+input:focus-visible{
+    border: 1px solid rgba(255, 255, 255, 0.644);
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.combinebox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.citybox select{
+    background-color: rgba(255, 255, 255, 0.199);
+    border: 1px solid rgba(255, 255, 255, 0.377);
+    padding: 5px 10px 5px 5px;
+    border-radius: 5px;
+    color: white;
+    transition: .3s;
+}
+
+.citybox select:focus-visible{
+    outline: none;
+}
+
+.citybox select option{
+    color: black;
+}
+
+.combinebox3 .genderbox{
+    width: 55%;
+}
+
+.combinebox3 .citybox{
+    width: 45%;
+}
+
+.hobbybox label{
+    margin-right: 10px;
+}
+
+.hobbybox input[type=checkbox]{
+    margin-right: 2px;
+}
+
+.buttonbox{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 30px;
+}
+
+.buttonbox input[type=button], .buttonbox input[type=submit]{
+    border: none;
+    width: 30%;
+    padding: 15px 20px;
+    color: white;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.199);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.buttonbox input[type=button]:hover,  .buttonbox input[type=submit]:hover{
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.buttonbox #update{
+    display: none;
+}
+
+.printeddata{
+    padding: 150px 0;
+    color: black;
+}
+
+.printeddata table{
+    margin: 0 auto;
+}
+
+th,td{
+    padding: 5px 10px;
+}
+
+.updatebtn{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: rgb(85, 177, 85);
+    color: white;
+    border-radius: 7px;
+}
+
+.deletebtn{
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background-color: rgb(221, 59, 59);
+    color: white;
+    border-radius: 7px;
+}
+
+.valpops{
+    position: absolute;
+    font-size: 12px!important;
+    margin-left: 2px;
+    color: #ffa285;
+    opacity: 0;
+    transition: .3s;
+}

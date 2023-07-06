@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Localstorage</title>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="css/CRUD JS.css">
+
+</head>
+<body>
+
+    <div class="background">
+        <div class="crudform">
+            <form>
+
+                <span class="title">LOCALSTORAGE</span>
+
+                <div class="combinebox combinebox1">
+                    <div class="box namebox">
+                        <span>Name</span><br><input type="text" id="name" placeholder="Enter Name"><br>
+                        <span class="valpops" id="namepop">Name is Empty</span>
+                    </div>
+    
+                    <div class="box emailbox">
+                        <span>Email</span><br><input type="email" id="email" placeholder="Enter Email"><br>
+                        <span class="valpops" id="emailpop">Email is Empty</span>
+                    </div>
+                </div>
+
+                <div class="combinebox combinebox2">
+                    <div class="box passwordbox">
+                        <span>Password</span><br><input type="password" id="password" placeholder="Enter Password"><br>
+                        <span class="valpops" id="passwordpop">Password is Empty</span>
+                    </div>
+    
+                    <div class="box mobilebox">
+                        <span>Mobile</span><br><input type="number" id="mobile" placeholder="Enter Number"><br>
+                        <span class="valpops" id="mobilepop">Mobile is Empty</span>
+                    </div>
+                </div>
+
+                <div class="combinebox combinebox3">
+                    <div class="box genderbox">
+                        <span>Gender</span><br>
+                        <input type="radio" value="male" name="gender" id="male"><label for="male" style="margin-right: 6px;">Male</label>
+                        <input type="radio" value="female" name="gender" id="female"><label for="female">Female</label><br>
+                        <span class="valpops" id="genderpop">Select Gender</span>
+                    </div>
+                    
+                    <div class="box citybox">
+                        <span>City</span><br>
+                        <select name="city" id="city">
+                            <option value="" selected disabled id="citybtn">City</option>
+                            <option value="surat">Surat</option>
+                            <option value="ahmedabad">Ahmedabad</option>
+                            <option value="rajkot">Rajkot</option>
+                            <option value="baroda">Baroda</option>
+                        </select><br>
+                        <span class="valpops" id="citypop">Select City</span>
+                    </div>
+                </div>
+
+                <div class="box hobbybox">
+                    <span>Hobby</span><br>
+                    <input type="checkbox" name="hobby" value="cricket" id="cricket"><label for="cricket">Cricket</label>
+                    <input type="checkbox" name="hobby" value="music" id="music"><label for="music">Music</label>
+                    <input type="checkbox" name="hobby" value="movies" id="movies"><label for="movies">Movies</label>
+                </div>
+
+                <div class="box buttonbox">
+                    <input type="button" value="SUBMIT" id="submit" onclick="submitData()">
+                    <input type="button" value="UPDATE" id="update">
+                    <input type="button" value="RESET" onclick="resetData()">
+                    <input type="button" value="CLEAR DATA" onclick="clearData()">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="printeddata">
+        <table border="">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Mobile</th>
+                    <th>Gender</th>
+                    <th>City</th>
+                    <th>Hobby</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JS Link -->
+    <script src="js/CRUD JS.js"></script>
+    
+</body>
+</html>
